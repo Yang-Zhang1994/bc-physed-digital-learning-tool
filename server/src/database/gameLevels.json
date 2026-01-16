@@ -1,0 +1,13 @@
+[
+  { "levelID": "1-1", "dialogID": "d1-1", "coin": 5, "exp": 10, "questionID": "q1-1" },
+  { "levelID": "1-2", "dialogID": "d1-2", "coin": 6, "exp": 12, "questionID": "q1-2" },
+  { "levelID": "1-3", "dialogID": "d1-3", "coin": 7, "exp": 14, "questionID": "q1-3" },
+
+  { "levelID": "2-1", "dialogID": "d2-1", "coin": 5, "exp": 10, "questionID": "q2-1" },
+  { "levelID": "2-2", "dialogID": "d2-2", "coin": 6, "exp": 12, "questionID": "q2-2" },
+  { "levelID": "2-3", "dialogID": "d2-3", "coin": 7, "exp": 14, "questionID": "q2-3" },
+
+  { "levelID": "3-1", "dialogID": "d3-1", "coin": 7, "exp": 14, "questionID": "q3-1" },
+  { "levelID": "3-2", "dialogID": "d3-2", "coin": 8, "exp": 16, "questionID": "q3-2" },
+  { "levelID": "3-3", "dialogID": "d3-3", "coin": 9, "exp": 18, "questionID": "q3-3" }
+]

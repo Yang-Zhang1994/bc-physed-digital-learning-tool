@@ -1,0 +1,295 @@
+[{
+  "_id": {
+    "$oid": "6924040320939b70c5b8f7a2"
+  },
+  "questionID": "q1-1",
+  "problem": "Which of the following is an example of good self-care that prepares you for the day?",
+  "type": "select",
+  "options": [
+    "Ignoring your hygiene because you are in a hurry",
+    "Checking your appearance in the mirror before leaving the house",
+    "Staying in your pajamas all day even when going out",
+    "Skipping meals to save time"
+  ],
+  "optionImage": null,
+  "answer": "Checking your appearance in the mirror before leaving the house",
+  "tip": "Good self-care includes taking time to prepare yourself for the day, which helps you feel confident and ready.",
+  "wrongText": [
+    "Ignoring hygiene is not good self-care and can affect your health and how others perceive you.",
+    "This is the correct answer - checking your appearance is a form of self-care that helps you feel prepared.",
+    "Staying in pajamas all day, especially when going out, is not appropriate self-care.",
+    "Skipping meals is not healthy and can affect your energy and well-being."
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-11-24T07:06:43.415Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T07:06:43.415Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6924040320939b70c5b8f7a3"
+  },
+  "questionID": "q1-2",
+  "problem": "Common interests can help people build friendships and relationships because they enjoy similar activities or hobbies.",
+  "type": "select",
+  "options": [
+    "True",
+    "False"
+  ],
+  "optionImage": null,
+  "answer": "True",
+  "tip": "Shared interests provide common ground for people to connect and build meaningful relationships.",
+  "wrongText": [
+    "This is correct - common interests are a great foundation for friendships and relationships.",
+    "This is incorrect - shared interests do help people connect and build relationships."
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-11-24T07:06:43.415Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T07:06:43.415Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6924040320939b70c5b8f7a4"
+  },
+  "questionID": "q1-3",
+  "problem": "One part of taking care of your home is completing regular __________, such as sweeping, doing laundry, or cleaning the bathroom.",
+  "type": "writing",
+  "options": [],
+  "optionImage": null,
+  "answer": [
+    "chores",
+    "household tasks",
+    "household chores",
+    "tasks",
+    "housework",
+    "cleaning tasks",
+    "daily chores",
+    "regular chores",
+    "regular tasks"
+  ],
+  "tip": "Think about the regular activities you do to keep your home clean and organized.",
+  "wrongText": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6924040320939b70c5b8f7a5"
+  },
+  "questionID": "q2-1",
+  "problem": "Which of the following is a private place where a person can touch their own body for self-care or masturbation?",
+  "type": "select",
+  "options": [
+    "The school bathroom",
+    "The bedroom at home with the door closed",
+    "The community centre bathroom",
+    "The living room when family members are around"
+  ],
+  "optionImage": null,
+  "answer": "The bedroom at home with the door closed",
+  "tip": "Private spaces are places where you have privacy and can be alone, like your bedroom with the door closed.",
+  "wrongText": [
+    "School bathrooms are public spaces where others may enter.",
+    "This is the correct answer - your bedroom with the door closed is a private space.",
+    "Community centre bathrooms are public spaces.",
+    "The living room with family around is not a private space."
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6924040320939b70c5b8f7a6"
+  },
+  "questionID": "q2-2",
+  "problem": "Touching your genitals for pleasure is something you should only do in private places, such as your home bathroom or bedroom, with the door closed.",
+  "type": "select",
+  "options": [
+    "True",
+    "False"
+  ],
+  "optionImage": null,
+  "answer": "True",
+  "tip": "Activities involving touching your genitals should only be done in private spaces where you have privacy and won't be disturbed.",
+  "wrongText": [
+    "This is correct - private activities should only happen in private spaces.",
+    "This is incorrect - these activities should be done in private, not public spaces."
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6924040320939b70c5b8f7a8"
+  },
+  "questionID": "q3-1",
+  "problem": "Which of the following is NOT a correct step when putting on an external condom?",
+  "type": "select",
+  "options": [
+    "Check the expiry date on the package",
+    "Tear the condom package open with your teeth",
+    "Pinch the tip of the condom before rolling it down",
+    "Roll the condom all the way to the base of the penis or sex toy"
+  ],
+  "optionImage": null,
+  "answer": "Tear the condom package open with your teeth",
+  "tip": "You should never tear a condom package with your teeth as this can damage the condom. Always use your fingers or scissors to open the package carefully.",
+  "wrongText": [
+    "Checking the expiry date is an important safety step.",
+    "This is the correct answer - you should never tear a condom package with your teeth.",
+    "Pinching the tip prevents air bubbles and is a correct step.",
+    "Rolling the condom all the way to the base ensures proper coverage."
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6924040320939b70c5b8f7aa"
+  },
+  "questionID": "q3-3",
+  "problem": "Sperm are made in the __________, and an egg travels through the __________. A pregnancy can occur if a sperm meets an egg inside the __________.",
+  "type": "writing",
+  "options": [],
+  "optionImage": null,
+  "answer": [
+    "testicles / fallopian tube / uterus",
+    "testicles / fallopian tubes / uterus",
+    "testicles/fallopian tube/uterus",
+    "testicles/fallopian tubes/uterus",
+    "testes / fallopian tube / uterus",
+    "testes / fallopian tubes / uterus",
+    "testes/fallopian tube/uterus",
+    "testes/fallopian tubes/uterus"
+  ],
+  "tip": "Think about where sperm production occurs, where eggs travel, and where fertilization and pregnancy happen.",
+  "wrongText": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6924040320939b70c5b8f7a7"
+  },
+  "questionID": "q2-3",
+  "problem": "Match each activity with whether it should happen in a public or private space:",
+  "type": "classification",
+  "options": [
+    "Saying hello to someone visiting your home",
+    "Getting changed into new clothes",
+    "Masturbation / touching your genitals",
+    "Talking to a friend at the bus stop"
+  ],
+  "optionImage": null,
+  "answer": "",
+  "tip": "Think about which activities require privacy and which can be done in front of others.",
+  "wrongText": [
+    "Greeting visitors is a social activity that can happen in public spaces.",
+    "Changing clothes requires privacy and should happen in a private space.",
+    "Touching your genitals is a private activity that should only happen in private spaces.",
+    "Talking to friends is a social activity that can happen in public spaces."
+  ],
+  "groups": [
+    {
+      "groupName": "Private space",
+      "items": [
+        "Getting changed into new clothes",
+        "Masturbation / touching your genitals"
+      ]
+    },
+    {
+      "groupName": "Public space",
+      "items": [
+        "Saying hello to someone visiting your home",
+        "Talking to a friend at the bus stop"
+      ]
+    }
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6924040320939b70c5b8f7a9"
+  },
+  "questionID": "q3-2",
+  "problem": "Match each body part to its correct function:",
+  "type": "classification",
+  "options": [
+    "Ovaries",
+    "Urethra",
+    "Testicles"
+  ],
+  "optionImage": null,
+  "answer": "",
+  "tip": "Match each body part to its primary reproductive or excretory function.",
+  "wrongText": [
+    "Ovaries are responsible for producing eggs (ova) in the female reproductive system.",
+    "The urethra is the tube through which both urine and semen exit the body.",
+    "Testicles (testes) are responsible for producing sperm in the male reproductive system."
+  ],
+  "groups": [
+    {
+      "groupName": "Produces eggs (ova)",
+      "items": [
+        "Ovaries"
+      ]
+    },
+    {
+      "groupName": "Tube where urine and semen exit the body",
+      "items": [
+        "Urethra"
+      ]
+    },
+    {
+      "groupName": "Produces sperm",
+      "items": [
+        "Testicles"
+      ]
+    }
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  }
+}]

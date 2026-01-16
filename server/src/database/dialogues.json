@@ -1,0 +1,360 @@
+[{
+  "_id": {
+    "$oid": "6924040320939b70c5b8f7d1"
+  },
+  "dialogID": "d1-1",
+  "content": [
+    {
+      "text": "Good morning! I'm Sunny the Squirrel — the forest's most organized morning expert!",
+      "name": "Sunny the Squirrel",
+      "events": []
+    },
+    {
+      "text": "Every day when I wake up, I stretch my tail, wash my face, and tidy up my fur before I go searching for nuts.",
+      "name": "Sunny the Squirrel",
+      "events": []
+    },
+    {
+      "text": "But today I rushed out too quickly… and a bird told me I had leaves stuck on my head! How embarrassing!",
+      "name": "Sunny the Squirrel",
+      "events": []
+    },
+    {
+      "text": "So now I always check myself in a shiny puddle before going anywhere. It helps me feel confident and ready!",
+      "name": "Sunny the Squirrel",
+      "events": []
+    },
+    {
+      "text": "Speaking of getting ready… I have a question for you!",
+      "name": "Sunny the Squirrel",
+      "events": []
+    }
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-11-24T07:06:43.415Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T07:06:43.415Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6924040320939b70c5b8f7d2"
+  },
+  "dialogID": "d1-2",
+  "content": [
+    {
+      "text": "Hey there! I'm Lila the Llama — and guess what? I just made a new friend today!",
+      "name": "Lila the Llama",
+      "events": []
+    },
+    {
+      "text": "Her name is Tilly the Turtle, and at first I wasn't sure if we'd get along… I mean, I'm super energetic and she's really slow.",
+      "name": "Lila the Llama",
+      "events": []
+    },
+    {
+      "text": "But then we found out we BOTH love painting colorful rocks! We spent the whole afternoon decorating pebbles together.",
+      "name": "Lila the Llama",
+      "events": []
+    },
+    {
+      "text": "It's funny how just one shared hobby can make two completely different animals become good friends!",
+      "name": "Lila the Llama",
+      "events": []
+    },
+    {
+      "text": "Let me ask you something about friendships!",
+      "name": "Lila the Llama",
+      "events": []
+    }
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-11-24T07:06:43.415Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T07:06:43.415Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6924040320939b70c5b8f7d3"
+  },
+  "dialogID": "d1-3",
+  "content": [
+    {
+      "text": "Hi there! I'm Momo the Mouse — tiny, speedy, and super good at keeping my little mouse home tidy!",
+      "name": "Momo the Mouse",
+      "events": []
+    },
+    {
+      "text": "Every morning, I sweep up cookie crumbs, fluff my bedding, and fold my teensy clothes. It keeps my burrow cozy!",
+      "name": "Momo the Mouse",
+      "events": []
+    },
+    {
+      "text": "My friend Benny the Beaver visited once and said, 'Momo, how do you keep everything so clean?'",
+      "name": "Momo the Mouse",
+      "events": []
+    },
+    {
+      "text": "I told him it's just about doing little tasks every day so my home stays nice!",
+      "name": "Momo the Mouse",
+      "events": []
+    },
+    {
+      "text": "Now, let me ask you something about taking care of your home!",
+      "name": "Momo the Mouse",
+      "events": []
+    }
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6924040320939b70c5b8f7d4"
+  },
+  "dialogID": "d2-1",
+  "content": [
+    {
+      "text": "Hello friend! I'm Otto the Owl. I like quiet places where I can relax, read, or take care of myself.",
+      "name": "Otto the Owl",
+      "events": []
+    },
+    {
+      "text": "Sometimes I need a private place to brush my feathers or practice my self-care routine.",
+      "name": "Otto the Owl",
+      "events": []
+    },
+    {
+      "text": "Once I tried doing it in the busy forest clearing… big mistake! Everyone kept walking by and staring.",
+      "name": "Otto the Owl",
+      "events": []
+    },
+    {
+      "text": "Now I always choose a safe and private spot where I won’t be interrupted.",
+      "name": "Otto the Owl",
+      "events": []
+    },
+    {
+      "text": "Let me ask you something about finding the right private place!",
+      "name": "Otto the Owl",
+      "events": []
+    }
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6924040320939b70c5b8f7d5"
+  },
+  "dialogID": "d2-2",
+  "content": [
+    {
+      "text": "Hi! I'm Poppy the Penguin. I love my cozy igloo because it's my private place!",
+      "name": "Poppy the Penguin",
+      "events": []
+    },
+    {
+      "text": "When I want quiet time or need to take care of myself, I slip inside and close the snow door.",
+      "name": "Poppy the Penguin",
+      "events": []
+    },
+    {
+      "text": "It’s important to have a space where you can be alone and not be disturbed.",
+      "name": "Poppy the Penguin",
+      "events": []
+    },
+    {
+      "text": "Some things are meant to stay private — and that’s totally okay!",
+      "name": "Poppy the Penguin",
+      "events": []
+    },
+    {
+      "text": "Let me check if you know about private spaces too!",
+      "name": "Poppy the Penguin",
+      "events": []
+    }
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6924040320939b70c5b8f7d6"
+  },
+  "dialogID": "d2-3",
+  "content": [
+    {
+      "text": "Hey there! I’m Coco the Cat — master of knowing when to be social and when to have private time.",
+      "name": "Coco the Cat",
+      "events": []
+    },
+    {
+      "text": "When guests come over, I walk proudly into the living room to say hello. I love the attention!",
+      "name": "Coco the Cat",
+      "events": []
+    },
+    {
+      "text": "But when I need to change into my comfy pajamas or do something private… I head straight to my room and close the door.",
+      "name": "Coco the Cat",
+      "events": []
+    },
+    {
+      "text": "Different activities belong in different places — some public, some private.",
+      "name": "Coco the Cat",
+      "events": []
+    },
+    {
+      "text": "Let’s see if you can sort a few activities too!",
+      "name": "Coco the Cat",
+      "events": []
+    }
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6924040320939b70c5b8f7d7"
+  },
+  "dialogID": "d3-1",
+  "content": [
+    {
+      "text": "Hey there! I'm Felix the Fox — the neighborhood safety expert!",
+      "name": "Felix the Fox",
+      "events": []
+    },
+    {
+      "text": "Yesterday, my friend Rabbit asked me for help because he tore open a snack bag with his teeth and ended up spilling everything!",
+      "name": "Felix the Fox",
+      "events": []
+    },
+    {
+      "text": "I told him, 'You have to be careful with delicate things! Sometimes teeth can damage stuff you're trying to open.'",
+      "name": "Felix the Fox",
+      "events": []
+    },
+    {
+      "text": "It's the same with other items too — if something is sensitive, you need to open it gently with your hands, not your teeth.",
+      "name": "Felix the Fox",
+      "events": []
+    },
+    {
+      "text": "Let me see if you know how to handle something carefully!",
+      "name": "Felix the Fox",
+      "events": []
+    }
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6924040320939b70c5b8f7d8"
+  },
+  "dialogID": "d3-2",
+  "content": [
+    {
+      "text": "Hello! I'm Dr. Pebble the Penguin — the coolest science teacher in the Arctic!",
+      "name": "Dr. Pebble",
+      "events": []
+    },
+    {
+      "text": "Today, my students and I explored how different body parts have different jobs.",
+      "name": "Dr. Pebble",
+      "events": []
+    },
+    {
+      "text": "Some parts help us grow, some help us breathe, and others help our bodies make special cells.",
+      "name": "Dr. Pebble",
+      "events": []
+    },
+    {
+      "text": "I told my class, 'Just like tools in a toolbox, every body part has its own purpose!'",
+      "name": "Dr. Pebble",
+      "events": []
+    },
+    {
+      "text": "Now I'm curious — can you match these body parts with the job they do?",
+      "name": "Dr. Pebble",
+      "events": []
+    }
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6924040320939b70c5b8f7d9"
+  },
+  "dialogID": "d3-3",
+  "content": [
+    {
+      "text": "Hi friend! I'm Luna the Lioness — and today I helped my cubs with their biology homework!",
+      "name": "Luna the Lioness",
+      "events": []
+    },
+    {
+      "text": "We were learning about how new life begins and how different parts of the body work together.",
+      "name": "Luna the Lioness",
+      "events": []
+    },
+    {
+      "text": "My cubs asked, 'Where do sperm come from? Where do eggs travel? How do babies start growing?'",
+      "name": "Luna the Lioness",
+      "events": []
+    },
+    {
+      "text": "I explained that each part of the body has a special role — just like how each lion in the pride has their own job!",
+      "name": "Luna the Lioness",
+      "events": []
+    },
+    {
+      "text": "Think you can fill in the blanks about how this process works?",
+      "name": "Luna the Lioness",
+      "events": []
+    }
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T07:06:43.416Z"
+  }
+}]

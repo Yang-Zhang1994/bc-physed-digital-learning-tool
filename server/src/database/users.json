@@ -1,0 +1,11 @@
+[
+  {
+    "username": "student1",
+    "password": "password123",
+    "petLevel": 1,
+    "completedModules": ["1"],
+    "pet": "Dog",
+    "coins": 100,
+    "inventory": ["Fancy Hat"]
+  }
+]

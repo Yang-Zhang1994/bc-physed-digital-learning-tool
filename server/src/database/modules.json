@@ -1,0 +1,75 @@
+[{
+  "_id": {
+    "$oid": "6924040320939b70c5b8f7b6"
+  },
+  "moduleID": "1",
+  "moduleName": "Self-Care and Life Skills",
+  "levelIDs": [
+    {
+      "$oid": "6924040320939b70c5b8f7ac"
+    },
+    {
+      "$oid": "6924040320939b70c5b8f7ad"
+    },
+    {
+      "$oid": "6924040320939b70c5b8f7ae"
+    }
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-11-24T07:06:43.471Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T07:06:43.471Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6924040320939b70c5b8f7b7"
+  },
+  "moduleID": "2",
+  "moduleName": "Privacy and Boundaries",
+  "levelIDs": [
+    {
+      "$oid": "6924040320939b70c5b8f7af"
+    },
+    {
+      "$oid": "6924040320939b70c5b8f7b0"
+    },
+    {
+      "$oid": "6924040320939b70c5b8f7b1"
+    }
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-11-24T07:06:43.471Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T07:06:43.471Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6924040320939b70c5b8f7b8"
+  },
+  "moduleID": "3",
+  "moduleName": "Sexual Health and Safety",
+  "levelIDs": [
+    {
+      "$oid": "6924040320939b70c5b8f7b2"
+    },
+    {
+      "$oid": "6924040320939b70c5b8f7b3"
+    },
+    {
+      "$oid": "6924040320939b70c5b8f7b4"
+    }
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-11-24T07:06:43.471Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T07:06:43.471Z"
+  }
+}]

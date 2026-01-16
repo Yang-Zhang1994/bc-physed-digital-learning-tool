@@ -1,0 +1,37 @@
+{
+  "id": 0,
+  "title": "Cardio and Fitness Basics",
+  "questions": [
+    {
+      "prompt": "Which activity best improves cardiorespiratory endurance?",
+      "options": [
+        "Jogging for 20 minutes",
+        "Doing 5 push-ups",
+        "Holding a plank for 30 seconds",
+        "Static stretching"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "prompt": "Which habit supports healthy recovery after exercise?",
+      "options": [
+        "Drinking water and getting enough sleep",
+        "Skipping cool-down to save time",
+        "Only training the same muscle every day",
+        "Avoiding all carbohydrates"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "prompt": "Which measure best indicates workout intensity for most people?",
+      "options": [
+        "Perceived exertion and heart rate",
+        "Shoe brand and color",
+        "How sweaty a friend looks",
+        "Number of gym selfies"
+      ],
+      "answerIndex": 0
+    }
+  ]
+}
+
