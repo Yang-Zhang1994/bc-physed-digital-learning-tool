@@ -1,0 +1,19 @@
+# Render Blueprint — BC PhysEd API (same pattern as SmartChef)
+# https://dashboard.render.com → New → Blueprint
+services:
+  - type: web
+    name: bc-physed-api
+    runtime: node
+    rootDir: server
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: CLIENT_ORIGIN
+        sync: false
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false

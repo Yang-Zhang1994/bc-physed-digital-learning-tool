@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { api } from "../api/api";
-import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 type StudentRow = {
@@ -18,7 +17,6 @@ export default function TeacherDashboard() {
   const [rows, setRows] = useState<StudentRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const navigate = useNavigate();
   const { user, logout } = useAuth();
   const [showProfile, setShowProfile] = useState(false);
 

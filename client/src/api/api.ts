@@ -1,7 +1,9 @@
 import axios from 'axios';
 
 export const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL
+  // Production: set VITE_API_URL to the Render API origin (no trailing slash).
+  // Local: client/.env → http://localhost:5000
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000',
 });
 
 export function setAuthToken(token?: string) {

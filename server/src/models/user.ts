@@ -39,6 +39,8 @@ export interface IUser extends Document {
   pet?: string | null;
   coins: number;
   inventory: string[];
+  createdAt?: Date;
+  updatedAt?: Date;
 }
 
 const PetStateSchema = new Schema<IPetState>(
