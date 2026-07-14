@@ -11,6 +11,19 @@ import teacherRoutes from './routes/teacherRoutes';
 
 async function bootstrap() {
   await connectDB();
+
+  try {
+    const { Module } = await import('./models/module');
+    const count = await Module.countDocuments();
+    if (count === 0 && process.env.AUTO_SEED !== 'false') {
+      console.log('📦 Empty Module collection — running content seed…');
+      const { runSeed } = await import('./database/seed');
+      await runSeed({ disconnect: false });
+    }
+  } catch (e) {
+    console.warn('Auto-seed skipped:', e);
+  }
+
   const app = express();
 
   console.log("✅ Loaded CLIENT_ORIGIN:", ENV.CLIENT_ORIGIN);

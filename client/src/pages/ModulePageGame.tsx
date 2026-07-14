@@ -45,6 +45,7 @@ export default function ModulePageGame() {
     // --- State ---
     const [levels, setLevels] = useState<LevelSummary[]>([]);
     const [loading, setLoading] = useState(true);
+    const [contentError, setContentError] = useState<string | null>(null);
     const [finishedLevels, setFinishedLevels] = useState<Set<number>>(new Set());
 
     // Stats Tracking (Module Level)
@@ -93,22 +94,28 @@ export default function ModulePageGame() {
     useEffect(() => {
         const fetchLevels = async () => {
             try {
+                setContentError(null);
                 const data = await fetchModuleLevels(moduleId);
                 const rawLevels = data.levels ?? [];
                 const lvls = rawLevels.map((l: any) => ({
-                    _id: l._id,
-                    levelID: l.levelID,
+                    _id: String(l._id),
+                    levelID: String(l.levelID ?? ''),
                     coins: l.coin ?? l.coins ?? 10,
-                    questionID: l.questionID,
-                    name: l.name ?? l.levelID,
-                }));
-                // Stub levels for demo if < 3
-                while (lvls.length < 3) {
-                    lvls.push({ _id: `stub-${lvls.length}`, levelID: `stub-${lvls.length}`, coins: 5, questionID: '', name: `Level ${lvls.length + 1}` });
+                    // API may return ObjectId for questionID — keep string form for /questions/:id
+                    questionID: String(l.questionID ?? l.questionId ?? ''),
+                    name: l.name ?? l.levelID ?? `Level`,
+                })).filter((l: LevelSummary) => Boolean(l.questionID));
+
+                if (lvls.length === 0) {
+                    setContentError(
+                        'No questions loaded for this module yet. Content may still be seeding — refresh in a few seconds.'
+                    );
                 }
                 setLevels(lvls);
             } catch (err) {
                 console.error(err);
+                setContentError('Could not load module content from the server.');
+                setLevels([]);
             } finally {
                 setLoading(false);
             }
@@ -397,19 +404,35 @@ export default function ModulePageGame() {
                 <div className="absolute inset-0 bg-black/30 backdrop-blur-sm transition-all duration-500 z-0" />
             )}
 
-            {/* NPCs */}
+            {/* NPCs — clickable if walk collision misses */}
             {npcPositionsRef.current.map((x, i) => {
                 const isFinished = finishedLevels.has(i);
+                const canStart = Boolean(levels[i]?.questionID) && !isFinished && currentLevelIndex === null && !question && !dialogueQueue;
                 return (
-                    <div key={i} className={`absolute bottom-32 flex flex-col items-center z-10 transition-all duration-500 ${isFinished ? 'opacity-50 grayscale' : ''}`} style={{ left: x }}>
+                    <div
+                        key={i}
+                        role="button"
+                        tabIndex={canStart ? 0 : -1}
+                        onClick={() => { if (canStart) void startLevel(i); }}
+                        onKeyDown={(e) => { if (canStart && (e.key === 'Enter' || e.key === ' ')) void startLevel(i); }}
+                        className={`absolute bottom-32 flex flex-col items-center z-10 transition-all duration-500 ${isFinished ? 'opacity-50 grayscale' : ''} ${canStart ? 'cursor-pointer hover:scale-110' : 'cursor-default'}`}
+                        style={{ left: x }}
+                        title={canStart ? 'Click to open question' : undefined}
+                    >
                         <div className="relative">
                             <div className="text-6xl mb-2">🐼</div>
                             {isFinished && <div className="absolute -top-2 -right-2 bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg border-2 border-white">✓</div>}
                         </div>
-                        <div className="px-2 py-1 bg-black/60 text-white text-xs rounded-full backdrop-blur">{levels[i]?.name}</div>
+                        <div className="px-2 py-1 bg-black/60 text-white text-xs rounded-full backdrop-blur">{levels[i]?.name ?? `Panda ${i + 1}`}</div>
                     </div>
                 );
             })}
+
+            {contentError && (
+                <div className="absolute top-16 left-1/2 -translate-x-1/2 z-50 max-w-lg rounded-xl bg-rose-600/90 px-4 py-3 text-center text-sm text-white shadow-lg">
+                    {contentError}
+                </div>
+            )}
 
             {/* Player */}
             <div className="absolute bottom-32 z-20 transition-transform duration-100" style={{ left: playerX, width: PLAYER_WIDTH }}>
