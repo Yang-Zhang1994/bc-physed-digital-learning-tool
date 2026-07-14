@@ -66,7 +66,7 @@ export async function runSeed(opts: { disconnect?: boolean } = {}) {
     }))
   );
 
-  const levels = [];
+  const levels: InstanceType<typeof GameLevel>[] = [];
   for (const L of levelsRaw) {
     const q = qById.get(L.questionID);
     if (!q) throw new Error(`Missing question ${L.questionID}`);
