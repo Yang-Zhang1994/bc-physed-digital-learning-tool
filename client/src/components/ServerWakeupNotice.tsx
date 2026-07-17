@@ -19,6 +19,7 @@ export default function ServerWakeupNotice() {
     const runId = runIdRef.current + 1;
     runIdRef.current = runId;
     setStatus("checking");
+    setShowNotice(true);
 
     for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt += 1) {
       const controller = new AbortController();

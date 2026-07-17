@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { usePet } from '../context/PetContext';
 import { fetchModuleLevels, fetchLevelDialogue, fetchQuestion } from '../context/moduleContext';
 import { api } from '../api/api';
+import ColdStartWaitNote from '../components/ColdStartWaitNote';
 
 // --- Types ---
 type LevelSummary = {
@@ -386,7 +387,14 @@ export default function ModulePageGame() {
         return { name: 'Bronze', color: 'bg-amber-700', icon: '🥉' };
     };
 
-    if (loading) return <div className="h-screen bg-slate-900 text-white flex items-center justify-center">Loading...</div>;
+    if (loading) {
+        return (
+            <div className="h-screen bg-slate-900 text-white flex flex-col items-center justify-center gap-3 px-6 text-center">
+                <p className="text-lg font-semibold">Loading...</p>
+                <ColdStartWaitNote className="text-slate-200 max-w-md" />
+            </div>
+        );
+    }
 
     const currentSpeaker = dialogueQueue ? dialogueQueue[dialogueIndex].name : "";
     const currentLine = dialogueQueue ? dialogueQueue[dialogueIndex].text : "";

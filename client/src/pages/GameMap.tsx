@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { usePet } from "../context/PetContext";
 import { useAuth } from "../context/AuthContext";
 import moduleContext from "../context/moduleContext";
+import ColdStartWaitNote from "../components/ColdStartWaitNote";
 
 type Module = {
   id: number;
@@ -394,16 +395,19 @@ export default function GameMap() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="absolute inset-0 flex items-center justify-center bg-black/70 z-50"
+            className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-black/70 z-50 px-6 text-center"
           >
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ repeat: Infinity, duration: 1.2, ease: "linear" }}
-              className="w-16 h-16 border-4 border-t-transparent border-white rounded-full"
-            />
-            <p className="text-white text-xl ml-4 font-semibold">
-              Entering {loadingTarget || "..."}...
-            </p>
+            <div className="flex items-center">
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ repeat: Infinity, duration: 1.2, ease: "linear" }}
+                className="w-16 h-16 border-4 border-t-transparent border-white rounded-full"
+              />
+              <p className="text-white text-xl ml-4 font-semibold">
+                Entering {loadingTarget || "..."}...
+              </p>
+            </div>
+            <ColdStartWaitNote className="text-slate-200 max-w-md" />
           </motion.div>
         )}
       </AnimatePresence>

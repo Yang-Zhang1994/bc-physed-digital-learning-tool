@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { api } from "../api/api";
 import { useAuth } from "../context/AuthContext";
+import ColdStartWaitNote from "../components/ColdStartWaitNote";
 
 type StudentRow = {
   id: string;
@@ -46,7 +47,14 @@ export default function TeacherDashboard() {
     window.URL.revokeObjectURL(url);
   };
 
-  if (loading) return <div className="p-6">Loading...</div>;
+  if (loading) {
+    return (
+      <div className="p-6 max-w-md space-y-3">
+        <p className="font-semibold">Loading...</p>
+        <ColdStartWaitNote className="text-slate-600" />
+      </div>
+    );
+  }
 
   return (
     <div className="p-6">

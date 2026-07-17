@@ -3,6 +3,7 @@ import { useAuth } from "../context/AuthContext";
 import { usePet } from "../context/PetContext";
 import { useNavigate } from "react-router-dom";
 import { api } from "../api/api";
+import ColdStartWaitNote from "../components/ColdStartWaitNote";
 
 export default function Login() {
   const { login, logout } = useAuth();
@@ -14,9 +15,12 @@ export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [msg, setMsg] = useState<string>("");
+  const [submitting, setSubmitting] = useState(false);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setSubmitting(true);
+    setMsg("");
     try {
       if (mode === "register") {
         // create account then automatically log in
@@ -67,6 +71,8 @@ export default function Login() {
       }
     } catch (err: any) {
       setMsg(err?.response?.data?.msg ?? "Something went wrong");
+    } finally {
+      setSubmitting(false);
     }
   }
 
@@ -119,10 +125,25 @@ export default function Login() {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <button className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition">
-            {mode === "login" ? "Login" : "Register"}
+          <button
+            className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition disabled:opacity-60"
+            disabled={submitting}
+          >
+            {submitting
+              ? mode === "login"
+                ? "Signing in…"
+                : "Creating account…"
+              : mode === "login"
+                ? "Login"
+                : "Register"}
           </button>
         </form>
+
+        {submitting ? (
+          <div className="mt-4 text-center">
+            <ColdStartWaitNote className="text-slate-600" />
+          </div>
+        ) : null}
 
         <p className="text-center text-sm mt-4">
           {mode === "login" ? (
@@ -131,6 +152,8 @@ export default function Login() {
               <button
                 className="text-blue-600 underline"
                 onClick={() => setMode("register")}
+                type="button"
+                disabled={submitting}
               >
                 Register
               </button>
@@ -141,6 +164,8 @@ export default function Login() {
               <button
                 className="text-blue-600 underline"
                 onClick={() => setMode("login")}
+                type="button"
+                disabled={submitting}
               >
                 Login
               </button>

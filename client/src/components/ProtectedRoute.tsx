@@ -2,6 +2,7 @@ import React from "react";
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { usePet } from "../context/PetContext";
+import ColdStartWaitNote from "./ColdStartWaitNote";
 
 type Props = {
   children: React.ReactNode;
@@ -19,7 +20,14 @@ export default function ProtectedRoute({
   const { user } = useAuth();
   const { pet, isLoading } = usePet();
 
-  if (isLoading) return <div className="text-center mt-10">Loading...</div>;
+  if (isLoading) {
+    return (
+      <div className="text-center mt-10 px-6 max-w-md mx-auto space-y-3">
+        <p className="font-semibold">Loading...</p>
+        <ColdStartWaitNote className="text-slate-600" />
+      </div>
+    );
+  }
 
   if (!user) return <Navigate to="/login" replace />;
   if (requireTeacher && user.type !== 'teacher') return <Navigate to="/" replace />;
