@@ -10,10 +10,10 @@ A gamified digital learning platform for BC Physical Education, featuring intera
 | **API** | https://bc-physed-api.onrender.com |
 
 > [!NOTE]
-> **The first visit may take 30–60 seconds.** The free-tier Render API sleeps after
-> inactivity. BC PhysEd shows a startup banner and retries `/health` automatically;
-> if startup takes longer, use the **Try again** button. You can also open
-> https://bc-physed-api.onrender.com/health once first.
+> **Please wait about 1 minute on the first visit.** The free-tier Render API sleeps after
+> inactivity, so the first request must wake the server. BC PhysEd shows a startup banner and
+> retries `/health` automatically; if startup takes longer, use the **Try again** button. You
+> can also open https://bc-physed-api.onrender.com/health once first.
 
 Hosted on **Vercel** (client) and **Render** (API) with **MongoDB Atlas**.
 

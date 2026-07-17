@@ -64,7 +64,11 @@ export default function ServerWakeupNotice() {
       <aside className="server-status server-status--error" role="alert">
         <div>
           <strong>The demo server is taking longer than expected.</strong>
-          <span> It uses free-tier hosting and may need another minute to reconnect.</span>
+          <span>
+            {" "}
+            Free-tier hosting sleeps after inactivity. Please wait about 1 minute, then click Try
+            again.
+          </span>
         </div>
         <button type="button" className="server-status__button" onClick={() => void checkServer()}>
           Try again
@@ -80,8 +84,8 @@ export default function ServerWakeupNotice() {
         <strong>Starting the demo server…</strong>
         <span>
           {" "}
-          Free-tier hosting may take up to 60 seconds after inactivity. BC PhysEd will reconnect
-          automatically.
+          Please wait about 1 minute. Free-tier hosting sleeps after inactivity, so the first visit
+          must wake the API before the app can load data.
         </span>
       </div>
     </aside>
