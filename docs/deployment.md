@@ -33,10 +33,11 @@ Free Render services sleep after idle; first request can take 30–60s.
 2. **Root Directory:** `client`
 3. **Build Command:** `npm run build`
 4. **Output Directory:** `dist`
-5. Environment variable (**Production**):
+5. SPA routing: `client/vercel.json` rewrites all paths to `index.html` so refresh on `/map`, `/teacher`, etc. does not 404.
+6. Environment variable (**Production**):
    - `VITE_API_URL` = `https://YOUR-API.onrender.com` (no trailing slash)
-6. Deploy. Copy the Vercel URL.
-7. Go back to Render → set `CLIENT_ORIGIN` to that Vercel URL → **Manual Deploy** so CORS matches.
+7. Deploy. Copy the Vercel URL.
+8. Go back to Render → set `CLIENT_ORIGIN` to that Vercel URL → **Manual Deploy** so CORS matches.
 
 ## 3. Smoke test
 
