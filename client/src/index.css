@@ -23,3 +23,67 @@ a {
 a:hover {
   color: #1e40af; /* blue-800 */
 }
+
+.server-status {
+  position: fixed;
+  top: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: min(calc(100% - 1.5rem), 36rem);
+  padding: 0.75rem 0.9rem;
+  color: #0f172a;
+  background: #eff6ff;
+  border: 1px solid #93c5fd;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgb(15 23 42 / 0.12);
+}
+
+.server-status--error {
+  justify-content: space-between;
+  background: #fef2f2;
+  border-color: #fca5a5;
+}
+
+.server-status__indicator {
+  flex: 0 0 auto;
+  width: 0.75rem;
+  height: 0.75rem;
+  border: 2px solid rgb(37 99 235 / 0.25);
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: server-status-spin 0.9s linear infinite;
+}
+
+.server-status__button {
+  flex: 0 0 auto;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #0f172a;
+  padding: 0.4rem 0.7rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.server-status__button:hover {
+  background: #f8fafc;
+}
+
+@keyframes server-status-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 639px) {
+  .server-status,
+  .server-status--error {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

@@ -9,7 +9,13 @@ A gamified digital learning platform for BC Physical Education, featuring intera
 | **Website** | https://bc-physed.vercel.app |
 | **API** | https://bc-physed-api.onrender.com |
 
-Hosted on **Vercel** (client) and **Render** (API) with **MongoDB Atlas**. Free-tier API may **sleep when idle**—first request after idle can take ~30–60s (or hit `/health` once first).
+> [!NOTE]
+> **The first visit may take 30–60 seconds.** The free-tier Render API sleeps after
+> inactivity. BC PhysEd shows a startup banner and retries `/health` automatically;
+> if startup takes longer, use the **Try again** button. You can also open
+> https://bc-physed-api.onrender.com/health once first.
+
+Hosted on **Vercel** (client) and **Render** (API) with **MongoDB Atlas**.
 
 **Try it (student path):** Register → choose pet → open a module on the map → walk into / click a panda → answer the question.  
 **Teacher path:** Register with teacher role → `/teacher` dashboard → CSV export.

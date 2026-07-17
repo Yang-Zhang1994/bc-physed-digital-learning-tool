@@ -11,6 +11,7 @@ import { PetProvider } from "./context/PetContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import TeacherDashboard from "./pages/TeacherDashboard";
 import TeacherStudent from "./pages/TeacherStudent";
+import ServerWakeupNotice from "./components/ServerWakeupNotice";
 
 export default function App() {
   console.log("✅ API base URL:", import.meta.env.VITE_API_URL);
@@ -19,6 +20,7 @@ export default function App() {
     <PetProvider>
       <AuthProvider>
         <BrowserRouter>
+          <ServerWakeupNotice />
           <Routes>
             {/* Public route */}
             <Route path="/" element={<Login />} />
