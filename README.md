@@ -206,15 +206,21 @@ bc-physed-digital-learning-tool/
 
 - Users can register as either **students** or **teachers**
 - Passwords are hashed using **bcryptjs**
-- JWT tokens are used for session management
-- Protected routes require authentication
+- **HttpOnly cookies** hold a short-lived **access** JWT (~15m) and a long-lived **refresh** JWT (~7d)
+- Access JWT claims: `id` (user), `role` (`student` | `teacher` | `admin`), plus standard `exp` / `iat`
+- Refresh tokens are hashed in MongoDB and rotated on each `/api/auth/refresh`; logout revokes them
+- Teacher API routes check the JWT role **and** re-read the role from the database
+- The React client uses `withCredentials` and silently refreshes on `401` — tokens are never stored in `localStorage`
 
 ## 📊 API Endpoints
 
 ### Authentication
 - `POST /api/auth/register` - Register new user
-- `POST /api/auth/login` - Login user
-- `GET /api/auth/me` - Get current user info
+- `POST /api/auth/login` - Login (sets HttpOnly access + refresh cookies)
+- `POST /api/auth/refresh` - Rotate refresh cookie and mint a new access cookie
+- `POST /api/auth/logout` - Revoke refresh token and clear cookies
+- `POST /api/auth/logout-all` - Revoke every refresh token for the current user
+- `GET /api/auth/me` - Get current user info (+ access token `exp`)
 
 ### Content
 - `GET /api/content/modules` - Get all modules
