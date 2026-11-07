@@ -20,8 +20,12 @@ Same split as SmartChef: **Vite React on Vercel** + **Express on Render** + **Mo
    - Health check: `/health`
 3. Environment variables on the service:
    - `MONGO_URI` — Atlas connection string (add `/bc-physed` database name in the path if missing)
-   - `JWT_SECRET` — long random string
-   - `CLIENT_ORIGIN` — your Vercel URL, e.g. `https://bc-physed.vercel.app` (update after step 2)
+   - `JWT_SECRET` — long random string (access tokens)
+   - `JWT_REFRESH_SECRET` — optional separate secret for refresh tokens (defaults to `JWT_SECRET`)
+   - `ACCESS_TOKEN_TTL` — optional, default `15m`
+   - `REFRESH_TOKEN_TTL` — optional, default `7d`
+   - `COOKIE_SECURE` — leave unset in production (`true` when `NODE_ENV=production`) so cross-origin cookies use `SameSite=None; Secure`
+   - `CLIENT_ORIGIN` — your Vercel URL, e.g. `https://bc-physed.vercel.app` (update after step 2; required for credentialed CORS)
 4. Deploy and copy the public URL, e.g. `https://bc-physed-api.onrender.com`
 5. Confirm: `curl https://YOUR-API.onrender.com/health` → `{"ok":true}`
 
@@ -56,3 +60,5 @@ Free Render services sleep after idle; first request can take 30–60s.
 
 - Never commit `server/.env` or `client/.env`.
 - If an Atlas password was ever shared in chat/logs, **rotate it** in Atlas and update Render `MONGO_URI`.
+- Auth cookies are **HttpOnly**. Production (Vercel ↔ Render) relies on `credentials: true` CORS plus `SameSite=None; Secure`. Keep `CLIENT_ORIGIN` locked to the real Vercel URL so browsers block other origins on preflight.
+- Access tokens carry `role` + `exp` but expire quickly; teacher routes still verify role in MongoDB so a demotion takes effect within the access TTL.

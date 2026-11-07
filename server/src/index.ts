@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import cookieParser from 'cookie-parser';
 import { connectDB } from './config/db';
 import { ENV } from './utils/env';
 import authRoutes from './routes/authRoutes';
@@ -27,31 +28,25 @@ async function bootstrap() {
   const app = express();
 
   console.log("✅ Loaded CLIENT_ORIGIN:", ENV.CLIENT_ORIGIN);
+  console.log("✅ Cookie secure:", ENV.COOKIE_SECURE, "| access TTL:", ENV.ACCESS_TOKEN_TTL);
 
-  // ✅ Step 1: Add top-level CORS and OPTIONS wildcard handlers
-  app.use(cors({
+  const corsOptions = {
     origin: ENV.CLIENT_ORIGIN,
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-  }));
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  };
 
-  app.options(/.*/, cors({
-    origin: ENV.CLIENT_ORIGIN,
-    credentials: true
-  }));
+  app.use(cors(corsOptions));
+  app.options(/.*/, cors(corsOptions));
 
-  // ✅ Step 2: Log incoming request details for debugging
   app.use((req, res, next) => {
     console.log("🌐 Incoming Origin:", req.headers.origin, req.method, req.path);
     next();
   });
 
-
-  // app.use(cors({ origin: ENV.CLIENT_ORIGIN, credentials: true }));
-  
-
   app.use(express.json());
+  app.use(cookieParser());
 
   app.get('/health', (_req, res) => res.json({ ok: true }));
   app.use('/api/auth', authRoutes);

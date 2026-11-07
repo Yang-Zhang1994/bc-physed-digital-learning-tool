@@ -32,9 +32,9 @@ export default function Login() {
         await refreshPetData();
 
         if (activeTab === "teacher") {
-          if (user.type !== "teacher") {
+          if (user.type !== "teacher" && user.type !== "admin") {
             setMsg("This account is not a teacher. Please switch to Student Login or use a teacher account.");
-            logout();
+            await logout();
             return;
           }
           navigate("/teacher");
@@ -54,9 +54,9 @@ export default function Login() {
 
         // ✅ Fetch latest pet data directly for guaranteed redirect accuracy
         if (activeTab === "teacher") {
-          if (user.type !== "teacher") {
+          if (user.type !== "teacher" && user.type !== "admin") {
             setMsg("This account is not a teacher. Please switch to Student Login or use a teacher account.");
-            logout();
+            await logout();
             return;
           }
           navigate("/teacher");

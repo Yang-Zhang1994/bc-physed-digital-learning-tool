@@ -17,10 +17,10 @@ export default function ProtectedRoute({
   blockIfPet = false,
   requireTeacher = false,
 }: Props) {
-  const { user } = useAuth();
+  const { user, authReady } = useAuth();
   const { pet, isLoading } = usePet();
 
-  if (isLoading) {
+  if (!authReady || isLoading) {
     return (
       <div className="text-center mt-10 px-6 max-w-md mx-auto space-y-3">
         <p className="font-semibold">Loading...</p>
@@ -30,7 +30,9 @@ export default function ProtectedRoute({
   }
 
   if (!user) return <Navigate to="/login" replace />;
-  if (requireTeacher && user.type !== 'teacher') return <Navigate to="/" replace />;
+  if (requireTeacher && user.type !== 'teacher' && user.type !== 'admin') {
+    return <Navigate to="/" replace />;
+  }
   if (requirePet && !pet) return <Navigate to="/pet" replace />;
   if (blockIfPet && pet) return <Navigate to="/map" replace />;
 

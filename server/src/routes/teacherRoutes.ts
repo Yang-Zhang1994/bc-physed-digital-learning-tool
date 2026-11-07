@@ -1,15 +1,11 @@
 import { Router } from "express";
-import { requireAuth, AuthedRequest } from "../middleware/auth";
+import { requireAuth, requireRole, requireTeacherFromDb, AuthedRequest } from "../middleware/auth";
 import { User } from "../models/user";
 
 const router = Router();
 
-async function assertTeacher(req: AuthedRequest, res: any) {
-  const me = await User.findById(req.userId);
-  if (!me) return { ok: false, status: 404, msg: "User not found" };
-  if (me.type !== "teacher") return { ok: false, status: 403, msg: "Teacher only" };
-  return { ok: true };
-}
+/** JWT role gate + DB re-check on every teacher route. */
+const teacherOnly = [requireAuth, requireRole("teacher", "admin"), requireTeacherFromDb];
 
 function computeStats(u: any) {
   const qres = (u.data && (u.data as any).questionResult) || {};
@@ -86,10 +82,7 @@ function computeStats(u: any) {
 }
 
 // GET /api/teacher/students
-router.get("/students", requireAuth, async (req: AuthedRequest, res) => {
-  const check = await assertTeacher(req, res);
-  if (!check.ok) return res.status((check as any).status).json({ msg: (check as any).msg });
-
+router.get("/students", ...teacherOnly, async (_req: AuthedRequest, res) => {
   const students = await User.find({
     $or: [{ type: "student" }, { type: { $exists: false } }, { type: null }],
   }).select(
@@ -111,9 +104,7 @@ router.get("/students", requireAuth, async (req: AuthedRequest, res) => {
 });
 
 // GET /api/teacher/students/:id
-router.get("/students/:id", requireAuth, async (req: AuthedRequest, res) => {
-  const check = await assertTeacher(req, res);
-  if (!check.ok) return res.status((check as any).status).json({ msg: (check as any).msg });
+router.get("/students/:id", ...teacherOnly, async (req: AuthedRequest, res) => {
   const u = await User.findById(req.params.id).select(
     "username petLevel coins completedModules data updatedAt createdAt"
   );
@@ -151,9 +142,7 @@ function toCSV(rows: any[]) {
 }
 
 // GET /api/teacher/report.csv (all students)
-router.get("/report.csv", requireAuth, async (req: AuthedRequest, res) => {
-  const check = await assertTeacher(req, res);
-  if (!check.ok) return res.status((check as any).status).json({ msg: (check as any).msg });
+router.get("/report.csv", ...teacherOnly, async (_req: AuthedRequest, res) => {
   const students = await User.find({
     $or: [{ type: "student" }, { type: { $exists: false } }, { type: null }],
   }).select(
@@ -178,9 +167,7 @@ router.get("/report.csv", requireAuth, async (req: AuthedRequest, res) => {
 });
 
 // GET /api/teacher/students/:id/report.csv
-router.get("/students/:id/report.csv", requireAuth, async (req: AuthedRequest, res) => {
-  const check = await assertTeacher(req, res);
-  if (!check.ok) return res.status((check as any).status).json({ msg: (check as any).msg });
+router.get("/students/:id/report.csv", ...teacherOnly, async (req: AuthedRequest, res) => {
   const u = await User.findById(req.params.id).select(
     "username petLevel coins completedModules data updatedAt"
   );
